@@ -76,7 +76,6 @@ class GoogleApi
 
         $jwt = "$signatureInput.$signature";
 
-        /** @var Response $response */
         $response = Http::asForm()->post("https://oauth2.googleapis.com/token", [
             "grant_type" => "urn:ietf:params:oauth:grant-type:jwt-bearer",
             "assertion" => $jwt
@@ -99,7 +98,7 @@ class GoogleApi
         return $data;
     }
 
-    protected function base64UrlEncode($data)
+    protected function base64UrlEncode(string $data)
     {
         return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
     }

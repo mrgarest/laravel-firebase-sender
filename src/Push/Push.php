@@ -11,7 +11,6 @@ class Push
     /** @var string[]|null */
     public ?array $titleLocArgs;
 
-
     public ?string $body;
 
     public ?string $bodyLocKey;

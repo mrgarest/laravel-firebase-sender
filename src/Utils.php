@@ -13,11 +13,11 @@ class Utils
      * 
      * @return array|null
      */
-    public static function nullFilter(array $array): array|null
+    public static function nullFilter(array $args): array|null
     {
         $filtered = [];
 
-        foreach ($array as $key => $value) {
+        foreach ($args as $key => $value) {
             if (is_array($value)) {
                 $value = self::nullFilter($value);
             }

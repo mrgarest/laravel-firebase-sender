@@ -58,7 +58,7 @@ class FirebaseSender
      *
      * @param string $serviceAccountName Name from the `service_accounts` array located in the `config/firebase-sender.php` file.
      * 
-     * @throws Ex\ServiceAccountException
+     * @throws \Garest\FirebaseSender\Exceptions\ServiceAccountException
      */
     public function __construct(string $serviceAccountName)
     {
@@ -85,7 +85,7 @@ class FirebaseSender
     /**
      * Sets the index for a group of messages.
      *
-     * @param string $index
+     * @param int $index
      */
     public function setGroup(int $index): void
     {
@@ -128,7 +128,7 @@ class FirebaseSender
      * @param TopicCondition|string $topic Either a simple topic string or a complex TopicCondition object.
      * 
      * @throws \InvalidArgumentException if less than two topic conditions are defined when using TopicCondition
-     * @throws Ex\MissingTopicConditionOperatorException if the condition operator is missing when using TopicCondition
+     * @throws \Garest\FirebaseSender\Exceptions\MissingTopicConditionOperatorException if the condition operator is missing when using TopicCondition
      */
     public function setTopic(TopicCondition|string $topic): void
     {

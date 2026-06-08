@@ -3,7 +3,6 @@
 namespace Garest\FirebaseSender\Jobs;
 
 use Garest\FirebaseSender\Events\FirebaseMessageFailed;
-use Garest\FirebaseSender\Events\FirebaseNotFound;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Garest\FirebaseSender\FirebaseSender;
